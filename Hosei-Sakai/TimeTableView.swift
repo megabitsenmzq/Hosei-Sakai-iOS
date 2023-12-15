@@ -15,6 +15,7 @@ struct TimeTableView: View {
     var body: some View {
         VStack {
             AutoLoginWebView(url: $url, username: .constant(LoginManager.shared.username), password: .constant(LoginManager.shared.password), isLoginError: $isError)
+                .allowsHitTesting(false)
                 .task {
                     if let newURL = await downloadTimetable() {
                         url = URL(string: newURL)!
