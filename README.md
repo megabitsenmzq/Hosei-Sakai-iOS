@@ -9,7 +9,7 @@
 
 ベータ版はここからダウンロードできます：[TestFlight](https://testflight.apple.com/join/jkk2nFWH)。
 
-Android バージョンはこちら：[GitHub](https://github.com/megabitsenmzq/Hosei-Sakai-Android)
+Android 版はこちら：[GitHub](https://github.com/megabitsenmzq/Hosei-Sakai-Android)
 
 ## 機能詳細
 
