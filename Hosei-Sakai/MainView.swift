@@ -31,11 +31,11 @@ struct MainView: View {
                     Image(systemName: "text.book.closed.fill")
                     Text("授業")
                 }
-//            TimeTableView()
-//                .tabItem {
-//                    Image(systemName: "calendar")
-//                    Text("時間割")
-//                }
+            TimeTableView()
+                .tabItem {
+                    Image(systemName: "calendar")
+                    Text("時間割")
+                }
             SettingsTab()
                 .tabItem {
                     Image(systemName: "gear")
