@@ -23,7 +23,6 @@ enum HoppiiURLs: String {
     
     // HTML pages
     case assignmentDetail = "https://hoppii.hosei.ac.jp/direct/assignment/%@"
-    case timeTablePage = "https://hoppii.hosei.ac.jp/portal/tool-reset/e0adde9d-020c-47df-97d7-d50fb86fb185/"
     
     var url: URL {
         URL(string: self.rawValue)!
