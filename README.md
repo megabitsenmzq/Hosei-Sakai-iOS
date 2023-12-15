@@ -1,6 +1,6 @@
 # Hosei-Sakai-iOS
 
-[![Swift 5.0](https://img.shields.io/badge/Swift-5.0-orange.svg?style=flat)](https://developer.apple.com/swift/)
+[![Swift Badge](https://img.shields.io/badge/Swift-5.0-F05138?logo=swift&logoColor=fff&style=flat)](https://developer.apple.com/swift/)
 [![License GPLv3](https://img.shields.io/badge/License-GPLv3-blue.svg?style=flat)](https://www.gnu.org/licenses/gpl-3.0.html)
 
 ![icon](assets/icon.png)
@@ -8,6 +8,8 @@
 法政大学の学習支援システム、Hoppii のアプリです。大学の許可を得る上の自主制作です。
 
 ベータ版はここからダウンロードできます：[TestFlight](https://testflight.apple.com/join/jkk2nFWH)。
+
+Android バージョンはこちら：[GitHub](https://github.com/megabitsenmzq/Hosei-Sakai-Android)
 
 ## 機能詳細
 
@@ -30,7 +32,7 @@
 
 ## 技術仕様
 
-アプリ全体は SwiftUI で構成している。iOS バージョンは 15.0 以上に設定している。
+アプリは SwiftUI で作成している。iOS バージョンは 15.0 以上に設定している。
 
 ログイン部分は法政の統合認証のページを裏に表示し、入力した情報を自動的に裏のページに入力する方法で実装している。
 
@@ -40,5 +42,5 @@ Hoppii は [Sakai](https://www.sakailms.org) をベースして作った物な�
 
 ### 使用したパッケージ
 
-- [KeychainSwift](https://github.com/evgenyneu/keychain-swift): Keychain でログイン情報を安全に保存するために使用している。
-- [SwiftSoup](https://github.com/scinfu/SwiftSoup): HTML を解読するために使用している。 
+- [KeychainSwift](https://github.com/evgenyneu/keychain-swift)：Keychain でログイン情報を安全に保存するために使用している。
+- [SwiftSoup](https://github.com/scinfu/SwiftSoup)：HTML を解読するために使用している。 
