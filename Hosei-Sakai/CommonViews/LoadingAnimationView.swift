@@ -14,7 +14,7 @@ struct LoadingAnimationView: View {
         var body: some View {
             Circle()
                 .foregroundColor(.accentColor)
-                .frame(width: 70, height: 70)
+                .frame(width: 50, height: 50)
                 .scaleEffect(scale)
                 .animation(Animation.easeInOut(duration: 0.6).repeatForever().delay(delay), value: UUID())
                 .onAppear {

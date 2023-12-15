@@ -39,6 +39,12 @@ struct SettingsTab: View {
                             UIPasteboard.general.string = loginManager.currentUser?.email
                         }
                     })
+                    
+                    Button("ログアウト") {
+                        LoginManager.shared.logout()
+                        LoginManager.shared.refreshLoginState()
+                    }
+                    .tint(.red)
                 }
                 
                 Section("表示") {
@@ -51,12 +57,10 @@ struct SettingsTab: View {
                     TamachiClassroomDownloadView()
                 }
                 
-                Section("アカウント") {
-                    Button("ログアウト") {
-                        LoginManager.shared.logout()
-                        LoginManager.shared.refreshLoginState()
+                Section("アプリについて") {
+                    Button("オーペンソース") {
+                        UIApplication.shared.open(URL(string: "https://github.com/megabitsenmzq/Hosei-Sakai-iOS")!)
                     }
-                    .tint(.red)
                 }
                 
                 #if DEBUG
