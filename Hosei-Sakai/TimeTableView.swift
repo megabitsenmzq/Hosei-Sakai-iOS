@@ -9,20 +9,30 @@ import SwiftUI
 import SwiftSoup
 
 struct TimeTableView: View {
+    @Environment(\.colorScheme) var colorScheme
+    
     @State var url = URL(string: "about:blank")!
     @State var isError = false
     
+    var webView: some View {
+        AutoLoginWebView(url: $url, username: .constant(LoginManager.shared.username), password: .constant(LoginManager.shared.password), isLoginError: $isError)
+    }
+    
     var body: some View {
-        VStack {
-            AutoLoginWebView(url: $url, username: .constant(LoginManager.shared.username), password: .constant(LoginManager.shared.password), isLoginError: $isError)
-                .allowsHitTesting(false)
-                .task {
-                    if let newURL = await downloadTimetable() {
-                        url = URL(string: newURL)!
-                    } else {
-                        isError = true
-                    }
-                }
+        Group {
+            if colorScheme == .dark {
+                webView
+                    .colorInvert()
+            } else {
+                webView
+            }
+        }
+        .task {
+            if let newURL = await downloadTimetable() {
+                url = URL(string: newURL)!
+            } else {
+                isError = true
+            }
         }
     }
     
