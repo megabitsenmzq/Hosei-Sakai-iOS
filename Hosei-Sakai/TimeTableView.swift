@@ -28,22 +28,22 @@ struct TimeTableView: View {
             }
         }
         .task {
-            if let newURL = await downloadTimetable() {
-                url = URL(string: newURL)!
+            if let newURL = await getTimetableURL() {
+                url = newURL
             } else {
                 isError = true
             }
         }
     }
     
-    func downloadTimetable() async -> String? {
+    func getTimetableURL() async -> URL? {
         do {
             let (data, _) = try await LoginManager.shared.createSession().data(from: HoppiiURLs.home.url)
             if let dataString = String(data: data, encoding: .utf8) {
                 let homePage = try SwiftSoup.parse(dataString)
                 let timetableDiv = try homePage.getElementsByClass("Mrphs-toolBody--sakai-timetable")
                 let iframe = try timetableDiv.select("iframe")
-                return try iframe.attr("src")
+                return try URL(string: iframe.attr("src"))
             }
         } catch {
             print(error)
