@@ -11,6 +11,8 @@ struct TimetableContentView: View {
     var noSunday = false
     var noSaturday = false
     
+    var table: [[String]]
+    
     @ViewBuilder
     func tableCell(_ text: String) -> some View {
         ZStack {
@@ -20,7 +22,7 @@ struct TimetableContentView: View {
                 .padding(1)
                 .border(Color(uiColor: .systemGray5), width: 0.5)
             Text(text)
-                .foregroundColor(.white)
+                .colorInvert()
                 .font(.system(size: 10, weight: .bold))
                 .padding(3)
         }
@@ -58,6 +60,7 @@ struct TimetableContentView: View {
         VStack(spacing: 0) {
             Color.clear
                 .frame(width: 20, height: 20)
+                .border(Color(uiColor: .systemGray5), width: 0.5)
             ForEach(1...table.first!.count, id: \.self) { index in
                 ZStack {
                     VStack {
@@ -73,13 +76,11 @@ struct TimetableContentView: View {
         }
     }
     
-    var table: [[String]]
-    
     var tableBody: some View {
         HStack(spacing: 0) {
             ForEach(table, id:\.self) { row in
                 VStack(spacing: 0) {
-                    ForEach(row, id: \.self) { column in
+                    ForEach(row, id: \.id) { column in
                         tableCell(column)
                     }
                 }
@@ -102,4 +103,10 @@ struct TimetableContentView: View {
 
 #Preview {
     TimetableContentView(table: [["", "", "", "", "", "", ""], ["", "", "", "", "情報システムデザイン", "", ""], ["", "プロジェクト実習・制作２", "", "プロジェクト実習・制作２", "ＡＩプログラミング", "", ""], ["", "プロジェクト実習・制作２", "デザイン・バックキャスティン...", "プロジェクト実習・制作２", "ＡＩプログラミング", "", ""], ["", "", "デザイン・バックキャスティン...", "デザインケーススタディ", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""]])
+}
+
+extension String: Identifiable {
+    public var id: UUID {
+        return UUID()
+    }
 }

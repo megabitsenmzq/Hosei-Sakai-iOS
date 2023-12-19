@@ -48,6 +48,7 @@
 		C0B24CFA28FE2538000CFEE7 /* DateFormatter+sakai.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B24CF928FE2538000CFEE7 /* DateFormatter+sakai.swift */; };
 		C0B24CFC28FE25D3000CFEE7 /* SakaiRefreshState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B24CFB28FE25D3000CFEE7 /* SakaiRefreshState.swift */; };
 		C0B24CFE28FE27E1000CFEE7 /* UserDefaults+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B24CFD28FE27E1000CFEE7 /* UserDefaults+Date.swift */; };
+		C0BA8B022B31CCA5007D455F /* TimetableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BA8B012B31CCA5007D455F /* TimetableManager.swift */; };
 		C0DE3CB328DDBA1600F49422 /* HoppiiURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DE3CB228DDBA1600F49422 /* HoppiiURLs.swift */; };
 		C0DE3CB528DDC00C00F49422 /* HoppiiJSs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DE3CB428DDC00C00F49422 /* HoppiiJSs.swift */; };
 		C0DE3CB728DDC1BD00F49422 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DE3CB628DDC1BD00F49422 /* LoginView.swift */; };
@@ -100,6 +101,7 @@
 		C0B24CF928FE2538000CFEE7 /* DateFormatter+sakai.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+sakai.swift"; sourceTree = "<group>"; };
 		C0B24CFB28FE25D3000CFEE7 /* SakaiRefreshState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SakaiRefreshState.swift; sourceTree = "<group>"; };
 		C0B24CFD28FE27E1000CFEE7 /* UserDefaults+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Date.swift"; sourceTree = "<group>"; };
+		C0BA8B012B31CCA5007D455F /* TimetableManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableManager.swift; sourceTree = "<group>"; };
 		C0DE3CB228DDBA1600F49422 /* HoppiiURLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoppiiURLs.swift; sourceTree = "<group>"; };
 		C0DE3CB428DDC00C00F49422 /* HoppiiJSs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoppiiJSs.swift; sourceTree = "<group>"; };
 		C0DE3CB628DDC1BD00F49422 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -291,6 +293,7 @@
 				C0B24CF728FE241A000CFEE7 /* AssignmentManager.swift */,
 				C07D6D1F29F25EF700D3005E /* SiteManager.swift */,
 				C07D6D2529F2669F00D3005E /* AnnouncementManager.swift */,
+				C0BA8B012B31CCA5007D455F /* TimetableManager.swift */,
 				C033AEC929F9277C00FDC8EA /* ContentsManager.swift */,
 				C0B24CF928FE2538000CFEE7 /* DateFormatter+sakai.swift */,
 				C0B24CFB28FE25D3000CFEE7 /* SakaiRefreshState.swift */,
@@ -435,6 +438,7 @@
 				C00376272A663E09002C078A /* ClassroomWebView.swift in Sources */,
 				C033AECC29F927C800FDC8EA /* Contents.swift in Sources */,
 				C0397CB428DEE91000AF7C18 /* LoadingAnimationView.swift in Sources */,
+				C0BA8B022B31CCA5007D455F /* TimetableManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

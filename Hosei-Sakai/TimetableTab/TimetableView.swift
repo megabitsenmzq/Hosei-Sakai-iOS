@@ -11,7 +11,6 @@ import SwiftSoup
 struct TimetableView: View {
     @Environment(\.colorScheme) var colorScheme
     
-    @State var url = URL(string: "about:blank")!
     @State var isError = false
     @State var noSunday = false
     @State var noSaturday = false
@@ -26,61 +25,26 @@ struct TimetableView: View {
             }
         }
         .task {
-            if let newURL = await getTimetableURL() {
-                url = newURL
-                var newTable = await getTimetableList()
-                let sunItems = newTable[0].reduce("", {$0 + $1})
+            if let newTable = await TimetableManager.shared.getTimeTable() {
+                var modifiedTable = newTable
+                guard !newTable.isEmpty else { return }
+                
+                // Check if Sunday is empty.
+                guard let sunItems = newTable.first?.reduce("", {$0 + $1}) else { return }
                 if sunItems == "" {
-                    newTable.removeFirst()
+                    modifiedTable.removeFirst()
                     noSunday = true
                 }
-                let satItems = newTable.last!.reduce("", {$0 + $1})
+                
+                // Check if Saturday is empty.
+                guard let satItems = newTable.last?.reduce("", {$0 + $1}) else { return }
                 if satItems == "" {
-                    newTable.removeLast()
+                    modifiedTable.removeLast()
                     noSaturday = true
                 }
-                table = newTable
-            } else {
-                isError = true
+                table = modifiedTable
             }
         }
-    }
-    
-    func getTimetableURL() async -> URL? {
-        do {
-            let (data, _) = try await LoginManager.shared.createSession().data(from: HoppiiURLs.home.url)
-            if let dataString = String(data: data, encoding: .utf8) {
-                let homePage = try SwiftSoup.parse(dataString)
-                let timetableDiv = try homePage.getElementsByClass("Mrphs-toolBody--sakai-timetable")
-                let iframe = try timetableDiv.select("iframe")
-                return try URL(string: iframe.attr("src"))
-            }
-        } catch {
-            print(error)
-        }
-        return nil
-    }
-    
-    func getTimetableList() async -> [[String]]{
-        do {
-            let (data, _) = try await LoginManager.shared.createSession().data(from: url)
-            if let dataString = String(data: data, encoding: .utf8) {
-                let homePage = try SwiftSoup.parse(dataString)
-                var rowTexts = try homePage.select("tr").map { tr in
-                    var columns = try tr.select("td").map { try $0.text() }
-                    if !columns.isEmpty {
-                        columns.removeFirst()
-                    }
-                    return columns
-                }
-                rowTexts.removeFirst()
-                
-                return rowTexts.transpose()
-            }
-        } catch {
-            print(error)
-        }
-        return [[]]
     }
 }
 

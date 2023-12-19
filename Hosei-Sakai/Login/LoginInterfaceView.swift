@@ -69,10 +69,6 @@ struct LoginInterfaceView: View {
         }
         .ignoresSafeArea(.keyboard)
         .padding(30)
-        .background() {
-            Image("RabbitHead")
-                .opacity(0.05)
-        }
     }
 }
 
