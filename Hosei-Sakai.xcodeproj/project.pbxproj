@@ -19,11 +19,13 @@
 		C0397CBD28DEFDF900AF7C18 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0397CBC28DEFDF900AF7C18 /* MainView.swift */; };
 		C0397CBF28DEFE2400AF7C18 /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0397CBE28DEFE2400AF7C18 /* UserInfoView.swift */; };
 		C0397CC128DF0A3500AF7C18 /* AssignmentsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0397CC028DF0A3500AF7C18 /* AssignmentsTab.swift */; };
-		C0397CC328DF0B2900AF7C18 /* TimeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0397CC228DF0B2900AF7C18 /* TimeTableView.swift */; };
+		C0397CC328DF0B2900AF7C18 /* TimetableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0397CC228DF0B2900AF7C18 /* TimetableView.swift */; };
 		C0397CC528DF0CC600AF7C18 /* Assignments.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0397CC428DF0CC600AF7C18 /* Assignments.swift */; };
 		C064302A2A66786A0009869B /* TamachiClassroomDownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06430292A66786A0009869B /* TamachiClassroomDownloadView.swift */; };
 		C06B760D2A29C5C0007274D6 /* AssignmentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06B760C2A29C5C0007274D6 /* AssignmentDetailView.swift */; };
 		C06B76102A29CF4D007274D6 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = C06B760F2A29CF4D007274D6 /* SwiftSoup */; };
+		C07C65812B3198C8001CA697 /* TimetableContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07C65802B3198C8001CA697 /* TimetableContentView.swift */; };
+		C07C65842B319F2F001CA697 /* Array+transpose.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07C65832B319F2F001CA697 /* Array+transpose.swift */; };
 		C07D6D1729F2423E00D3005E /* OptimizeForMobile.js in Resources */ = {isa = PBXBuildFile; fileRef = C07D6D1629F2423E00D3005E /* OptimizeForMobile.js */; };
 		C07D6D1A29F254DE00D3005E /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C07D6D1929F254DE00D3005E /* KeychainSwift */; };
 		C07D6D1E29F25DBD00D3005E /* Sites.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07D6D1D29F25DBD00D3005E /* Sites.swift */; };
@@ -68,11 +70,13 @@
 		C0397CBC28DEFDF900AF7C18 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		C0397CBE28DEFE2400AF7C18 /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
 		C0397CC028DF0A3500AF7C18 /* AssignmentsTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentsTab.swift; sourceTree = "<group>"; };
-		C0397CC228DF0B2900AF7C18 /* TimeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableView.swift; sourceTree = "<group>"; };
+		C0397CC228DF0B2900AF7C18 /* TimetableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableView.swift; sourceTree = "<group>"; };
 		C0397CC428DF0CC600AF7C18 /* Assignments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignments.swift; sourceTree = "<group>"; };
 		C05E83242916CEBA00A8A941 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C06430292A66786A0009869B /* TamachiClassroomDownloadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamachiClassroomDownloadView.swift; sourceTree = "<group>"; };
 		C06B760C2A29C5C0007274D6 /* AssignmentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentDetailView.swift; sourceTree = "<group>"; };
+		C07C65802B3198C8001CA697 /* TimetableContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableContentView.swift; sourceTree = "<group>"; };
+		C07C65832B319F2F001CA697 /* Array+transpose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+transpose.swift"; sourceTree = "<group>"; };
 		C07D6D1629F2423E00D3005E /* OptimizeForMobile.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = OptimizeForMobile.js; sourceTree = "<group>"; };
 		C07D6D1D29F25DBD00D3005E /* Sites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sites.swift; sourceTree = "<group>"; };
 		C07D6D1F29F25EF700D3005E /* SiteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteManager.swift; sourceTree = "<group>"; };
@@ -181,6 +185,23 @@
 			path = SettingsTab;
 			sourceTree = "<group>";
 		};
+		C07C657F2B319880001CA697 /* TimetableTab */ = {
+			isa = PBXGroup;
+			children = (
+				C0397CC228DF0B2900AF7C18 /* TimetableView.swift */,
+				C07C65802B3198C8001CA697 /* TimetableContentView.swift */,
+			);
+			path = TimetableTab;
+			sourceTree = "<group>";
+		};
+		C07C65822B319F18001CA697 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C07C65832B319F2F001CA697 /* Array+transpose.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		C07D6D1529F241F400D3005E /* JavaScripts */ = {
 			isa = PBXGroup;
 			children = (
@@ -234,7 +255,7 @@
 				C0397CBC28DEFDF900AF7C18 /* MainView.swift */,
 				C07D6D1B29F25D2B00D3005E /* AssignmentsTab */,
 				C07D6D1C29F25D8500D3005E /* SitesTab */,
-				C0397CC228DF0B2900AF7C18 /* TimeTableView.swift */,
+				C07C657F2B319880001CA697 /* TimetableTab */,
 				C08B221129F76CFF00ABE126 /* AttachmentView.swift */,
 				C0397CBE28DEFE2400AF7C18 /* UserInfoView.swift */,
 				C06430282A6678550009869B /* SettingsTab */,
@@ -244,6 +265,7 @@
 				C08B220F29F768D100ABE126 /* AttachmentDownloader.swift */,
 				C0F34FF728DE2E0D00973847 /* UserDefaultKeys.swift */,
 				C0B24CFD28FE27E1000CFEE7 /* UserDefaults+Date.swift */,
+				C07C65822B319F18001CA697 /* Extensions */,
 				C0358EA028F512EC007CD5AF /* Public.swift */,
 				C07D6D1529F241F400D3005E /* JavaScripts */,
 				C09A47F328DC40EB0025A10B /* Hosei-Sakai.entitlements */,
@@ -385,15 +407,17 @@
 				C0397CC528DF0CC600AF7C18 /* Assignments.swift in Sources */,
 				C0E616CC28E1329200B1E94B /* SettingsTab.swift in Sources */,
 				C07D6D2429F265BD00D3005E /* Announcements.swift in Sources */,
+				C07C65842B319F2F001CA697 /* Array+transpose.swift in Sources */,
 				C0B24CFA28FE2538000CFEE7 /* DateFormatter+sakai.swift in Sources */,
 				C09A47FA28E15A730025A10B /* AssignmentListRowView.swift in Sources */,
-				C0397CC328DF0B2900AF7C18 /* TimeTableView.swift in Sources */,
+				C0397CC328DF0B2900AF7C18 /* TimetableView.swift in Sources */,
 				C00CA40B2A2D9B9500683AC6 /* RoundedCorner.swift in Sources */,
 				C0DE3CB328DDBA1600F49422 /* HoppiiURLs.swift in Sources */,
 				C0397CB228DEE5F300AF7C18 /* LoginInterfaceView.swift in Sources */,
 				C0B24CF828FE241A000CFEE7 /* AssignmentManager.swift in Sources */,
 				C0397CC128DF0A3500AF7C18 /* AssignmentsTab.swift in Sources */,
 				C09A47E428DC40630025A10B /* Hosei_SakaiApp.swift in Sources */,
+				C07C65812B3198C8001CA697 /* TimetableContentView.swift in Sources */,
 				C07D6D1E29F25DBD00D3005E /* Sites.swift in Sources */,
 				C07D6D2829F267C500D3005E /* SiteView.swift in Sources */,
 				C08B220E29F62D1800ABE126 /* AnnouncementsDetailView.swift in Sources */,

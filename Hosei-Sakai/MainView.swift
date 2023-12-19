@@ -31,7 +31,7 @@ struct MainView: View {
                     Image(systemName: "text.book.closed.fill")
                     Text("授業")
                 }
-            TimeTableView()
+            TimetableView()
                 .tabItem {
                     Image(systemName: "calendar")
                     Text("時間割")
