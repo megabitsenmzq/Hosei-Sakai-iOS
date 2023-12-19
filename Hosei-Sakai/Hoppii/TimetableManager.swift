@@ -41,7 +41,7 @@ class TimetableManager {
             if let dataString = String(data: data, encoding: .utf8) {
                 let homePage = try SwiftSoup.parse(dataString)
                 var rowTexts = try homePage.select("tr").map { tr in
-                    var columns = try tr.select("td").map { try $0.text() }
+                    var columns = try tr.select("td").map { try $0.select("a").attr("title") }
                     if !columns.isEmpty {
                         columns.removeFirst()
                     }
