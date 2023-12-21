@@ -14,6 +14,10 @@ class AnnouncementManager: NSObject, ObservableObject {
     let logger = Logger(subsystem: Bundle.main.bundleIdentifier!, category: "AnnouncementManager")
     
     func getAnnouncements(siteID: String) async -> Announcements? {
+        if LoginManager.shared.isDemo {
+            return Announcements(entityPrefix: "", announcementCollection: DemoData.demoAnnouncements) 
+        }
+        
         do {
             let (data, _) = try await LoginManager.shared.createSession().data(from: HoppiiURLs.announcementsFromSite.url(with: siteID))
             let decoder = JSONDecoder()

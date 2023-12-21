@@ -17,6 +17,7 @@ class LoginManager: NSObject, ObservableObject {
     let logger = Logger(subsystem: Bundle.main.bundleIdentifier!, category: "LoginManager")
     
     @Published var loginState: Bool?
+    @Published var isDemo = false
     @Published var currentUser: UserInfo?
     
     @Published var username = LoginManager.keychain.get("login.username") {
@@ -65,6 +66,17 @@ class LoginManager: NSObject, ObservableObject {
     }
     
     func refreshLoginState() {
+        if isDemo {
+            print("isDemo")
+            currentUser = DemoData.demoUser
+            DispatchQueue.main.async {
+                self.loginState = nil
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                self.loginState = true
+            }
+            return
+        }
         logger.info("Start refresh login state.")
         refreshTask?.cancel()
         refreshTask = Task {
@@ -98,6 +110,7 @@ class LoginManager: NSObject, ObservableObject {
     func logout() {
         username = nil
         password = nil
+        isDemo = false
         HTTPCookieStorage.shared.removeCookies(since: .distantPast)
         let dataStore = WKWebsiteDataStore.default()
         dataStore.fetchDataRecords(ofTypes: WKWebsiteDataStore.allWebsiteDataTypes()) { records in

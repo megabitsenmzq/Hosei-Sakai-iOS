@@ -49,6 +49,12 @@ class AssignmentManager: NSObject, ObservableObject {
     }
     
     func refreshAssignments() {
+        if LoginManager.shared.isDemo {
+            assignments = DemoData.demoAssignments
+            state = .ready
+            return
+        }
+        
         state = .refreshing
         refreshTask?.cancel()
         refreshTask = Task {

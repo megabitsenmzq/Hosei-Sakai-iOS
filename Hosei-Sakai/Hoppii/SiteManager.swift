@@ -35,6 +35,12 @@ class SiteManager: NSObject, ObservableObject {
     }
     
     func refreshSites() {
+        if LoginManager.shared.isDemo {
+            sites = DemoData.demoSites
+            state = .ready
+            return
+        }
+        
         state = .refreshing
         refreshTask?.cancel()
         refreshTask = Task {

@@ -71,6 +71,11 @@ struct LoginView: View {
                         showLoading = false
                     } else {
                         // Try to use the exist credential.
+                        if username == "11N4514", password == "password" {
+                            loginManager.isDemo = true
+                            loginSuccess()
+                            return
+                        }
                         webUsername = username
                         webPassword = password
                         setTimeoutTimer()
@@ -115,6 +120,11 @@ struct LoginView: View {
             } else {
                 LoginInterfaceView(username: $username, password: $password, error: $loginError, loginAction: {
                     // Login pressed.
+                    if username == "11N4514", password == "password" {
+                        loginManager.isDemo = true
+                        loginSuccess()
+                        return
+                    }
                     webUsername = username
                     webPassword = password
                     setTimeoutTimer()
