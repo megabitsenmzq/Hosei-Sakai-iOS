@@ -44,6 +44,7 @@
 		C09A47EB28DC40660025A10B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C09A47EA28DC40660025A10B /* Preview Assets.xcassets */; };
 		C09A47F228DC40730025A10B /* AutoLoginWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09A47F128DC40730025A10B /* AutoLoginWebView.swift */; };
 		C09A47FA28E15A730025A10B /* AssignmentListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09A47F928E15A730025A10B /* AssignmentListRowView.swift */; };
+		C0AC24E12B33E053000B5F32 /* String+UUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AC24E02B33E053000B5F32 /* String+UUID.swift */; };
 		C0B24CF828FE241A000CFEE7 /* AssignmentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B24CF728FE241A000CFEE7 /* AssignmentManager.swift */; };
 		C0B24CFA28FE2538000CFEE7 /* DateFormatter+sakai.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B24CF928FE2538000CFEE7 /* DateFormatter+sakai.swift */; };
 		C0B24CFC28FE25D3000CFEE7 /* SakaiRefreshState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B24CFB28FE25D3000CFEE7 /* SakaiRefreshState.swift */; };
@@ -97,6 +98,7 @@
 		C09A47F128DC40730025A10B /* AutoLoginWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLoginWebView.swift; sourceTree = "<group>"; };
 		C09A47F328DC40EB0025A10B /* Hosei-Sakai.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Hosei-Sakai.entitlements"; sourceTree = "<group>"; };
 		C09A47F928E15A730025A10B /* AssignmentListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentListRowView.swift; sourceTree = "<group>"; };
+		C0AC24E02B33E053000B5F32 /* String+UUID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+UUID.swift"; sourceTree = "<group>"; };
 		C0B24CF728FE241A000CFEE7 /* AssignmentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentManager.swift; sourceTree = "<group>"; };
 		C0B24CF928FE2538000CFEE7 /* DateFormatter+sakai.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+sakai.swift"; sourceTree = "<group>"; };
 		C0B24CFB28FE25D3000CFEE7 /* SakaiRefreshState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SakaiRefreshState.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				C07C65832B319F2F001CA697 /* Array+transpose.swift */,
+				C0AC24E02B33E053000B5F32 /* String+UUID.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -419,6 +422,7 @@
 				C0397CB228DEE5F300AF7C18 /* LoginInterfaceView.swift in Sources */,
 				C0B24CF828FE241A000CFEE7 /* AssignmentManager.swift in Sources */,
 				C0397CC128DF0A3500AF7C18 /* AssignmentsTab.swift in Sources */,
+				C0AC24E12B33E053000B5F32 /* String+UUID.swift in Sources */,
 				C09A47E428DC40630025A10B /* Hosei_SakaiApp.swift in Sources */,
 				C07C65812B3198C8001CA697 /* TimetableContentView.swift in Sources */,
 				C07D6D1E29F25DBD00D3005E /* Sites.swift in Sources */,

@@ -95,6 +95,9 @@ struct AssignmentsTab: View {
                             switch assignmentManager.state {
                             case .refreshing:
                                 ProgressView()
+                            case .error(_):
+                                Image(systemName: "exclamationmark.triangle")
+                                    .foregroundColor(.orange)
                             default:
                                 Image(systemName: "arrow.clockwise")
                             }

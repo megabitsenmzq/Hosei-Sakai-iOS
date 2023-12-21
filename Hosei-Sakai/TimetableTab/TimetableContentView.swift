@@ -80,7 +80,7 @@ struct TimetableContentView: View {
         HStack(spacing: 0) {
             ForEach(table, id:\.self) { row in
                 VStack(spacing: 0) {
-                    ForEach(row, id: \.id) { column in
+                    ForEach(row, id: \.uuid) { column in
                         tableCell(column)
                     }
                 }
@@ -103,10 +103,4 @@ struct TimetableContentView: View {
 
 #Preview {
     TimetableContentView(table: [["", "", "", "", "", "", ""], ["", "", "", "", "情報システムデザイン", "", ""], ["", "プロジェクト実習・制作２", "", "プロジェクト実習・制作２", "ＡＩプログラミング", "", ""], ["", "プロジェクト実習・制作２", "デザイン・バックキャスティン...", "プロジェクト実習・制作２", "ＡＩプログラミング", "", ""], ["", "", "デザイン・バックキャスティン...", "デザインケーススタディ", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""]])
-}
-
-extension String: Identifiable {
-    public var id: UUID {
-        return UUID()
-    }
 }

@@ -49,6 +49,9 @@ struct SitesTab: View {
                             switch siteManager.state {
                             case .refreshing:
                                 ProgressView()
+                            case .error(_):
+                                Image(systemName: "exclamationmark.triangle")
+                                    .foregroundColor(.orange)
                             default:
                                 Image(systemName: "arrow.clockwise")
                             }
@@ -62,10 +65,6 @@ struct SitesTab: View {
         .onChange(of: scenePhase) { newPhase in
             if newPhase == .active {
                 siteManager.refreshSites()
-            } else if newPhase == .inactive {
-                
-            } else if newPhase == .background {
-                
             }
         }
         .onAppear {
