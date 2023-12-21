@@ -20,9 +20,9 @@ struct AssignmentsTab: View {
                 List {
                     if !swipeRightTipDismissed {
                         Section {
-                            Label("右にスワイプして完成する", systemImage: "arrow.right")
+                            Label("右にスワイプして完了する", systemImage: "arrow.right")
                                 .swipeActions(edge: .leading) {
-                                    Button("完成") {
+                                    Button("完了") {
                                         withAnimation {
                                             swipeRightTipDismissed = true
                                         }
@@ -45,7 +45,7 @@ struct AssignmentsTab: View {
                                     )
                                 }
                                 .swipeActions(edge: .leading) {
-                                    Button("完成") {
+                                    Button("完了") {
                                         withAnimation {
                                             assignmentManager.assignments?[index].markAsFinished = true
                                             swipeRightTipDismissed = true
@@ -73,7 +73,7 @@ struct AssignmentsTab: View {
                                     .opacity(0.5)
                                 }
                                 .swipeActions(edge: .leading) {
-                                    Button("非完成") {
+                                    Button("元に戻す") {
                                         withAnimation {
                                             assignmentManager.assignments?[index].markAsFinished = false
                                         }
@@ -82,7 +82,7 @@ struct AssignmentsTab: View {
                             }
                         }
                     } header: {
-                        Text("完成")
+                        Text("完了")
                     }
                 }
                 .navigationTitle("課題")

@@ -26,6 +26,12 @@ struct DemoData {
         Sites.SiteCollection(id: UUID().uuidString, title: "フランス語", joinable: true, entityId: "demo", entityTitle: "")
     ]
     
+    static let demoContents = [
+        Contents.ContentCollection(container: "", size: 0, title: "Empty", type: "Header", url: URL(string: "about:blank")!),
+        Contents.ContentCollection(container: "", size: 0, title: "グループ分け.pdf", type: "PDF", url: URL(string: "about:blank")!),
+        Contents.ContentCollection(container: "", size: 0, title: "提出スケジュール.pdf", type: "PDF", url: URL(string: "about:blank")!),
+    ]
+    
     static let demoAnnouncements = [
         Announcements.AnnouncementCollection(attachments: [], body: "皆さん！よいお年を！", id: UUID().uuidString, title: "最終発表会と提出物に関して"),
         Announcements.AnnouncementCollection(attachments: [], body: "皆さん！よいお年を！", id: UUID().uuidString, title: "物品購入について"),
