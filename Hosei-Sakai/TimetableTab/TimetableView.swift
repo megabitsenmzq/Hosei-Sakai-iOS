@@ -25,7 +25,7 @@ struct TimetableView: View {
             }
         }
         .task {
-            if let newTable = await TimetableManager.shared.getTimeTable() {
+            if let newTable = await TimetableManager.shared.getTimetable() {
                 var modifiedTable = newTable
                 guard !newTable.isEmpty else { return }
                 

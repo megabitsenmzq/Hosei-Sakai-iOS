@@ -14,7 +14,7 @@ class TimetableManager {
     
     let logger = Logger(subsystem: Bundle.main.bundleIdentifier!, category: "TimetableManager")
     
-    func getTimeTable() async -> [[String]]? {
+    func getTimetable() async -> [[String]]? {
         let session = await LoginManager.shared.createSession()
         guard let timetableURL = await getTimetableURL(session) else { return nil }
         return await getTimetableList(session, url: timetableURL)
