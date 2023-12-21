@@ -22,7 +22,7 @@ struct NetworkErrorView: View {
                 .padding()
             Spacer()
             Button("再試行", action: retryAction)
-                .buttonStyle(RoundedButtonStyle(buttonColor: Color("HoppiiOrange"), extend: true))
+                .buttonStyle(RoundedButtonStyle(buttonColor: .accentColor))
         }
         .padding(30)
     }
