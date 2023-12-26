@@ -12,11 +12,7 @@ struct ContentView: View {
     
     var body: some View {
         if loginManager.loginState == true {
-            if loginManager.isDemo {
-                DemoMainView()
-            } else {
-                MainView()
-            }
+            MainView()
         } else if loginManager.loginState == false {
             LoginView()
                 .environmentObject(LoginManager.shared)

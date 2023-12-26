@@ -45,7 +45,6 @@
 		C09A47F228DC40730025A10B /* AutoLoginWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09A47F128DC40730025A10B /* AutoLoginWebView.swift */; };
 		C09A47FA28E15A730025A10B /* AssignmentListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09A47F928E15A730025A10B /* AssignmentListRowView.swift */; };
 		C0AC24E12B33E053000B5F32 /* String+UUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AC24E02B33E053000B5F32 /* String+UUID.swift */; };
-		C0AC24E82B342AAA000B5F32 /* DemoMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AC24E72B342AAA000B5F32 /* DemoMainView.swift */; };
 		C0AC24ED2B3435B0000B5F32 /* DemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AC24EC2B3435B0000B5F32 /* DemoData.swift */; };
 		C0B24CF828FE241A000CFEE7 /* AssignmentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B24CF728FE241A000CFEE7 /* AssignmentManager.swift */; };
 		C0B24CFA28FE2538000CFEE7 /* DateFormatter+sakai.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B24CF928FE2538000CFEE7 /* DateFormatter+sakai.swift */; };
@@ -101,7 +100,6 @@
 		C09A47F328DC40EB0025A10B /* Hosei-Sakai.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Hosei-Sakai.entitlements"; sourceTree = "<group>"; };
 		C09A47F928E15A730025A10B /* AssignmentListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentListRowView.swift; sourceTree = "<group>"; };
 		C0AC24E02B33E053000B5F32 /* String+UUID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+UUID.swift"; sourceTree = "<group>"; };
-		C0AC24E72B342AAA000B5F32 /* DemoMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoMainView.swift; sourceTree = "<group>"; };
 		C0AC24EC2B3435B0000B5F32 /* DemoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoData.swift; sourceTree = "<group>"; };
 		C0B24CF728FE241A000CFEE7 /* AssignmentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentManager.swift; sourceTree = "<group>"; };
 		C0B24CF928FE2538000CFEE7 /* DateFormatter+sakai.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+sakai.swift"; sourceTree = "<group>"; };
@@ -262,7 +260,6 @@
 				C09A47E528DC40630025A10B /* ContentView.swift */,
 				C0397CBB28DEFC6800AF7C18 /* Login */,
 				C0397CBC28DEFDF900AF7C18 /* MainView.swift */,
-				C0AC24E72B342AAA000B5F32 /* DemoMainView.swift */,
 				C07D6D1B29F25D2B00D3005E /* AssignmentsTab */,
 				C07D6D1C29F25D8500D3005E /* SitesTab */,
 				C07C657F2B319880001CA697 /* TimetableTab */,
@@ -416,7 +413,6 @@
 				C0F34FF828DE2E0D00973847 /* UserDefaultKeys.swift in Sources */,
 				C064302A2A66786A0009869B /* TamachiClassroomDownloadView.swift in Sources */,
 				C0F34FF628DE2D9900973847 /* LoginManager.swift in Sources */,
-				C0AC24E82B342AAA000B5F32 /* DemoMainView.swift in Sources */,
 				C0397CC528DF0CC600AF7C18 /* Assignments.swift in Sources */,
 				C0E616CC28E1329200B1E94B /* SettingsTab.swift in Sources */,
 				C07D6D2429F265BD00D3005E /* Announcements.swift in Sources */,
