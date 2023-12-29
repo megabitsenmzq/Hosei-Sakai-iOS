@@ -7,7 +7,7 @@
 
 法政大学の学習支援システム、Hoppii のアプリです。大学の許可を得る上の自主制作です。
 
-ベータ版はここからダウンロードできます：[AppStore](https://apps.apple.com/app/id6444231147)
+ここからダウンロードできます：[AppStore](https://apps.apple.com/app/id6444231147)
 
 Android 版はこちらです：[GitHub](https://github.com/megabitsenmzq/Hosei-Sakai-Android)
 
