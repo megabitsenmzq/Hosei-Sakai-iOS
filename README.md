@@ -6,6 +6,7 @@
 ![icon](assets/icon.png)
 
 法政大学の学習支援システム、Hoppii のアプリです。大学の許可を得る上の自主制作です。
+Hoppii のアカウントがない場合、デモ用のユーザー名 11N4514、パスワード password で体験できます。
 
 ここからダウンロードできます：[AppStore](https://apps.apple.com/app/id6444231147)
 
