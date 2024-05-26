@@ -55,6 +55,12 @@ struct SettingsTab: View {
                 
                 Section("ツール") {
                     TamachiClassroomDownloadView()
+                    Button("ウェブ版 Hoppii を開く") {
+                        UIApplication.shared.open(URL(string: "https://hoppii.hosei.ac.jp/portal")!)
+                    }
+                    Button("学修成果可視化システム") {
+                        UIApplication.shared.open(URL(string: "https://halo.hosei.ac.jp/halo/select_login")!)
+                    }
                 }
                 
                 Section("アプリについて") {
