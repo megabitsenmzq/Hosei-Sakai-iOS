@@ -64,7 +64,7 @@ struct SettingsTab: View {
                 }
                 
                 Section("アプリについて") {
-                    Button("オーペンソース") {
+                    Button("オープンソース") {
                         UIApplication.shared.open(URL(string: "https://github.com/megabitsenmzq/Hosei-Sakai-iOS")!)
                     }
                 }
